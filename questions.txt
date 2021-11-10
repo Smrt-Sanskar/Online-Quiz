@@ -1,0 +1,43 @@
+Memory Management:Given that each page table entry contains a valid/invalid bit in addition to the page frame number. On a paging system with 224 bytes of physical memory, 256 pages of logical address space, and a page size of 210 bytes, how many bits are needed to store an entry in the page table?
+A) 30
+B) 15
+C) 5
+D) 45
+Answer:B
+Explanation:No. of bits required to specify the frame in Page Table = 24 (Entire Physical Address Space) – 10 (Displacement ) = 14 bits
+Bits required in each page table entry (assume each page table entry includes a valid/invalid bit) = 14 (Page Frame ) + 1 (Valid/Invalid) = 15 bits 
+So the correct answer will be 15 bits.
+
+Memory Management:Tick Mark the wrong schemes which can stop a deadlock from occuring.
+A) Requesting for all the resources required before execution to be allocated.
+B) Never request for a lower numbered resource than the previous requested one after numbering all the resources.
+C) Cannot request for a resource after releasing a resource.
+D) Before requesting a new resource it must be releasing all resources.
+Answer:C
+Explanation:If we request all resources to be allocated before hand then no chance of deadlock as we will have all the resources before starting the execution.
+For the B we can show from various graphs that it will never cause a cycle and thus no deadlocks will occur in this case also.
+The C option will cause a deadlock as there can be a cycle in the graph when this method is followed. Hence it is not correct scheme.
+Before requesting a new resource it must be releasing all resources will never allow a cycle to occur as if some request can cause deadlock its one end of cycle will get removed after releasing all the resources and thus no cycle will be formed.
+So A,B,D are all correct and C is wrong.
+
+Scheduling:Select the wrong statement for scheduling algorithms.
+A)For a uniprocessor machine Shortest Job First gives maximum throughput.
+B)Among Round Robin, FIFO, MLFQ the one which is non-preemptive is FIFO.
+C)Shortest remaining time first scheduling never causes starvation.
+D)Preemptive scheduling can cause starvation sometimes.
+E)For LRTF consider three processes (process id 0, 1, 2 respectively) with compute time bursts 2, 4 and 8 time units. All processes arrive at time zero. Average turnaround time is 13 units.
+Answer:C
+Explanation:For a uniprocessor machine Shortest Job First will give maximum throughput as it executes the shortest job and doesn't delay its finish time till later. 
+First In First out (FIFO) is non-preemptive rest others are preemptive.
+Shortest remaining time first scheduling is a preemptive version of shortest job scheduling. It may cause starvation as shorter processes may keep coming and a long CPU burst process never gets CPU. 
+Preemption may cause starvation. If priority based scheduling with preemption is used, then a low priority process may never get CPU. 
+When we arrange these processes in the order of their execution then p2 will complete at 14s and p0 will complete at 12s and p1 will complete at 13s. So Average turnaround time = (12-0 + 13-0 + 14-0)/3 = 13.
+
+Threads:Calculate the latency (from first bit sent to last bit received) for a 50-Gbps Ethernet with three store-and-forward switch in the path, and a packet size of 5,000 bits given that each link introduces a propagation delay of 50 micro-sec and that the switch begins retransmitting immediately after it has finished receiving the packet. Give answer in micro-seconds.
+A) 200
+B) 100
+C) 400
+D) 500
+Answer:A
+Explanation:For each link, it takes 50 Gbps/5 kb = 250 micro-sec to transmit the packet on the link, after which it takes an additional 50 micro-sec for the last bit to propagate across the link. Thus, for a LAN with  sthree  switched  and  thus  four  links,  the  total  delay  is  four  transmit  delays  +  four propagation delays = 1200 micro-sec.
+
